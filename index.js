@@ -5,11 +5,13 @@
 const fs = require('fs');
 const path = require('path');
 const process = require('process');
-const _path = require('./lib/path.js');
+const _directoryContentSync = require('./lib/directoryContentSync.js');
+const _path2join = require('./lib/path2join.js');
 const _unlink = require('./lib/unlink');
 
 module.exports.pwd = function() {
-  return _path();
+  return _path2join();
 };
-module.exports.path = _path;
+module.exports.dirSync = _directoryContentSync;
+module.exports.path = _path2join;
 module.exports.unlink = _unlink;

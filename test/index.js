@@ -7,4 +7,5 @@ const zfs = require('../');
 
 (function () {
   console.log(zfs.path(['x', '.', 'y.html'], {s:1, r:1}));
+  console.log(zfs.dirSync(['test']));
 })();
